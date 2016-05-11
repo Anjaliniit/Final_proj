@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:bean xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/security
+    http://www.springframework.org/schema/security/spring-security.xsd">
+   	<http auto-config="true">
+	<!-- 	<intercept-url pattern="/" access="permitAll" />
+		<intercept-url pattern="/index" access="permitAll" />
+	 -->	
+	 <intercept-url pattern="/admin*" access="hasRole('ROLE_ADMIN')" />
+		<form-login login-page="/loginPage" username-parameter="userid" password-parameter="password" login-processing-url="/login"
+			authentication-failure-url="/loginPage" />
+		<logout logout-success-url="/index" />
+		<csrf disabled="true" />
+	</http>
+	<!-- <authentication-manager> <authentication-provider> <user-service> <user 
+		name="admin" password="pass" authorities="ROLE_ADMIN" /> </user-service> 
+		</authentication-provider> </authentication-manager> -->
+	<authentication-manager>
+		<authentication-provider>
+			<jdbc-user-service data-source-ref="myDataSource"
+				users-by-username-query="select userid,password,enabled from adminlogin where userid=?"
+				authorities-by-username-query="select userid,role from adminrole where userid =?  " />
+		</authentication-provider>
+	</authentication-manager>
+</beans:bean>

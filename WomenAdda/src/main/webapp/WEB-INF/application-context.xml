@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.2.xsd
+    http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+<!-- DAO bean  -->
+<bean id="myDataSource"
+        class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="org.h2.Driver" />
+        <property name="url" value="jdbc:h2:tcp://localhost/~/test" />
+        <property name="username" value="sa" />
+        <property name="password" value="password" />
+ </bean>
+ <!-- session creation -->
+   <bean id="sessionFactory"
+        class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="myDataSource" />
+        <property name="packagesToScan" value="com.womenadda.model" />
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <prop key="hibernate.show_sql">true</prop>
+            </props>
+        </property>
+    </bean>
+
+ <!--  product bean -->
+    
+     <bean id="productDAO" class="com.womenadda.dao.ProductDAOImpl">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+    <bean id="productService" class="com.womenadda.service.ProductServiceImpl">
+        <property name="productDAO" ref="productDAO"></property>
+    </bean>
+    <!--  user bean -->
+     <bean id="userDAO" class="com.womenadda.dao.UserDAOImpl">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+    <bean id="userService" class="com.womenadda.service.UserServiceImpl">
+        <property name="userDAO" ref="userDAO"></property>
+    </bean>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <tx:annotation-driven transaction-manager="hibernateTransactionManager"/>
+    <!-- transaction mapping -->
+    <bean id="hibernateTransactionManager"
+        class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+</beans>

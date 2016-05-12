@@ -6,7 +6,7 @@
 
   <div class="row">
    <div class="col-md-5">
-    <img src="resources/images/${product.id}.jpg" class="image-responsive" height="300" width="300"/>
+    <img src="resources/images/${product.id}.jpg" class="image-responsive" height="300" width="300" border="1"/>
   
    </div>
    <div class="col-md-7">
@@ -111,6 +111,4 @@
 ${p.id}--%>
 
 
-</body>
-
-</html>
+<div id="footer"><%@include file="footer.jsp" %></div>

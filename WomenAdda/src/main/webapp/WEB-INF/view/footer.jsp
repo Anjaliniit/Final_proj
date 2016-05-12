@@ -5,11 +5,11 @@
                         <div class="carousel slide" data-ride="carousel" id="quote-carousel">
                             <!-- Bottom Carousel Indicators -->
                             <ol class="carousel-indicators">
-                                <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="">
+                                <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive" src="${imgloc}footer1.jpg" alt="">
                                 </li>
-                                <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/rssems/128.jpg" alt="">
+                                <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="${imgloc}footer2.jpg" alt="">
                                 </li>
-                                <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="">
+                                <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="${imgloc}footer3.jpg" alt="">
                                 </li>
                             </ol>
 
@@ -22,7 +22,7 @@
                                         <div class="row">
                                             <div class="col-sm-8 col-sm-offset-2">
 
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. !</p>
+                                                <p></p>
                                                 <small>Someone famous</small>
                                             </div>
                                         </div>
@@ -34,7 +34,7 @@
                                         <div class="row">
                                             <div class="col-sm-8 col-sm-offset-2">
 
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                                                <p></p>
                                                 <small>Someone famous</small>
                                             </div>
                                         </div>
@@ -46,7 +46,7 @@
                                         <div class="row">
                                             <div class="col-sm-8 col-sm-offset-2">
 
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. .</p>
+                                                <p></p>
                                                 <small>Someone famous</small>
                                             </div>
                                         </div>
@@ -63,13 +63,13 @@
 </div>
 <hr class="divider"/>
 <center>
-<strong>Powered by <a href="http://bootstheme.club" target="_blank">BootsTheme.Club</a></strong>
+<strong>Powered by <a href="${session.getContextPath()}/WomenAdda/index" target="_blank">Women Adda</a></strong>
 </center>
 <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; c PlanUrTrip, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; Plan ur shopping and share &middot;</a></p>
                 </div>
             </div>
         </div>

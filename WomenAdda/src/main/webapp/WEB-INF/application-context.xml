@@ -48,16 +48,7 @@
     </bean>
     <bean id="userService" class="com.womenadda.service.UserServiceImpl">
         <property name="userDAO" ref="userDAO"></property>
-    </bean>
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    </bean>    
     <tx:annotation-driven transaction-manager="hibernateTransactionManager"/>
     <!-- transaction mapping -->
     <bean id="hibernateTransactionManager"

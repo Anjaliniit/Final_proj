@@ -1,8 +1,15 @@
+<div id="main">
+   <div id="header">
 <%@include file="header.jsp" %>
-
+</div>
+<div id="body">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="row"><div class="col-lg-12"><p><center><h1>LOGIN PAGE<h1></center><p></div></div>
 <div class="row">
-    <div class="col-lg-3"><p><center><h1>LOGIN PAGE<h1></center><p></div>
-    <div class="col-lg-6">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
       
 
       <form class="form-signin" action="login" method="post">
@@ -20,18 +27,19 @@
       </form>
         </div>                                  
    
-   <div class="col-lg-3"></div>
+   <div class="col-lg-4"></div>
   
     
 <br>
 <br>
 <br>
 
-
-
+</div>
+<div id="footer">
 
 <%@include file="footer.jsp" %>
 
-
+</div>
+</div>
 
 

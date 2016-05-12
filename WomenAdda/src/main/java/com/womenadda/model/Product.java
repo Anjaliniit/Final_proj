@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.validation.constraints.Digits;
 
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.NumberFormat;
@@ -21,10 +22,27 @@ import org.springframework.web.multipart.MultipartFile;
 @Table(name="Product")
 public class Product implements Serializable {
 @Id
-@GeneratedValue(strategy=GenerationType.AUTO)
-int id;
+@GeneratedValue(strategy=GenerationType.IDENTITY)
+private int id;
 @NotEmpty(message="name can not be empty")
-String name;
+private String name;
+@Digits(integer=5,fraction=2)
+private double price;
+@NotEmpty(message="brand can not be empty")
+private String brand;
+@NotEmpty(message="category can not be empty")
+private String category;
+@NotEmpty(message="size can not be empty")
+private String size;
+@NotEmpty(message="Description can not be empty")
+private String description;
+@Transient
+private MultipartFile image;
+@NotEmpty(message="color can not be empty")
+private String color;
+
+
+
 /**
  * @return the size
  */
@@ -39,21 +57,6 @@ public void setSize(String size) {
 	this.size = size;
 }
 
-
-@NotEmpty(message="brand can not be empty")
-String brand;
-@NotEmpty(message="category can not be empty")
-String category;
-@NotEmpty(message="size can not be empty")
-String size;
-String description;
-@Transient
-MultipartFile image;
-@NotEmpty(message="color can not be empty")
-String color;
-@NumberFormat(style = Style.NUMBER)
-
-double price;
 public Product()
 {
 	

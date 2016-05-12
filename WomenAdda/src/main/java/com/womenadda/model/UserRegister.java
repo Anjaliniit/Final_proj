@@ -9,6 +9,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.format.annotation.NumberFormat;
+import org.springframework.format.annotation.NumberFormat.Style;
 
 /**
  * @author admin
@@ -18,8 +26,18 @@ import javax.persistence.Id;
 public class UserRegister implements Serializable {
 @Id
 @GeneratedValue(strategy=GenerationType.IDENTITY)
-int userId;
-private String name,password,gender,email,address,mobile;
+private int userId;
+
+private String name;
+
+private String password;
+
+private String gender;
+private String email;
+
+private String address;
+
+private long mobile;
 /**
  * @return the userId
  */
@@ -95,13 +113,13 @@ public void setAddress(String address) {
 /**
  * @return the mobile
  */
-public String getMobile() {
+public long getMobile() {
 	return mobile;
 }
 /**
  * @param mobile the mobile to set
  */
-public void setMobile(String mobile) {
+public void setMobile(long mobile) {
 	this.mobile = mobile;
 }
 

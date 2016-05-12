@@ -1,84 +1,91 @@
-<%@include file="header.jsp" %>
-<h1>
-    Add a Product
-</h1>
-
+<%@include file="header.jsp"%>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1> <center>ADMIN PAGE<center></center></h1>
 <c:url var="addAction" value="/admin/add"></c:url>
-<form:form action="${addAction}" commandName="product" modelAttribute="product" method="POST" enctype="multipart/form-data" >
-<table>
+<div class="container">
+	<div class="row" style="overflow-x:auto;">
+	<div class=col-xs-2></div>
+	<div class="col-xs-8" style="overflow-x:auto;">
+	<form:form action="${addAction}" commandName="product" modelAttribute="product" method="POST" enctype="multipart/form-data" >
+	<table   width="80%" >
     <c:if test="${!empty product.name}">
     <tr>
-        <td>
+        <td width="25%">
             <form:label path="id">
                 <spring:message text="ID"/>
             </form:label>
         </td>
-        <td>
+        <td width="25%">
             <form:input path="id" readonly="true" size="8"  disabled="true" />
             <form:hidden path="id" />
         </td> 
-        <td></td>
+        <td width="30%"></td>
         
     </tr>
     </c:if>
     <tr>
-        <td>
+        <td width="25%">
             <form:label path="name">
                 <spring:message text="Name"/>
             </form:label>
         </td>
-        <td>
+        <td width="25%">
             <form:input path="name" />
         </td> 
-        <td><form:errors path="name" cssStyle="color: #ff0000;"/></td>
+        <td width="30%"><form:errors path="name" cssStyle="color: #ff0000;"/></td>
         
     </tr>
     <tr> 
-   	 <td>
+   	 <td width="25%">
     <form:label path="brand">
             <spring:message text="Brand"/>
     </form:label>
       </td>
      
-    <td>
+    <td width="25%">
         <form:select path="brand">
 				<form:option value="" label="--- Select ---" />
 				<form:option value="W">W</form:option>  
                 <form:option value="Haute Curry">Haute Curry</form:option>  
                 <form:option value="Biba">Biba</form:option>  
-                <form:option value="Zara">Zara</form:option>  
+                <form:option value="Zara">Zara</form:option>
+                <form:option value="Lavie">Lavie</form:option>   
          </form:select>
          
         </td>
-        <td><form:errors path="brand" cssStyle="color: #ff0000;"/></td>
+        <td width="30%"><form:errors path="brand" cssStyle="color: #ff0000;"/></td>
         
     </tr>
     
      <tr>
-     <td>
+     <td width="25%">
       <form:label path="color">
                 <spring:message text="Color"/>
             </form:label>
             </td>
-        <td>
+        <td width="25%">
            <form:select path="color">
 				<form:option value="" label="--- Select ---" />
 				<form:option value="Red">Red</form:option>  
                 <form:option value="Green">Green</form:option>  
                 <form:option value="Blue">Blue</form:option>  
-                <form:option value="White">White</form:option>  
+                <form:option value="White">White</form:option>
+                <form:option value="White">Pink</form:option>
+                <form:option value="White">Black</form:option>  
                 </form:select>
       </td>
-     <td><form:errors path="color" cssStyle="color: #ff0000;"/></td>
+     <td width="30%"><form:errors path="color" cssStyle="color: #ff0000;"/></td>
   </tr>
     
     <tr>
-     <td>
+     <td width="25%">
       <form:label path="size">
                 <spring:message text="Size"/>
             </form:label>
             </td>
-        <td>
+        <td width="25%">
            <form:select path="size">
 				<form:option value="" label="--- Select ---" />
 				<form:option value="XS">XS</form:option>  
@@ -88,59 +95,65 @@
                 <form:option value="XL">XL</form:option>
                 </form:select>
       </td>
-     <td><form:errors path="size" cssStyle="color: #ff0000;"/></td>
+     <td width="30%"><form:errors path="size" cssStyle="color: #ff0000;"/></td>
   </tr>
     
      <tr>
-        <td>
+        <td width="25%">
             <form:label path="description">
                 <spring:message text="Description"/>
             </form:label>
         </td>
-        <td>
+        <td width="25%">
             <form:input path="description" />
         </td>
-        <td></td>
+        <td width="30%"></td>
     </tr>
      <tr>
-        <td>
+        <td width="25%">
             <form:label path="price">
                 <spring:message text="Price"/>
             </form:label>
         </td>
-        <td>
+        <td width="25%">
             <form:input path="price" />
         </td>
-        <td><form:errors path="price" cssStyle="color: #ff0000;"/></td>
+        <td width="30%"><form:errors path="price" cssStyle="color: #ff0000;"/></td>
     </tr>
      <tr>
-      <td>
+      <td width="25%">
             <form:label path="category">
                 <spring:message text="Category"/>
             </form:label>
         </td>
        
-      <td>
+      <td width="25%">
         <form:select path="category">
 				<form:option value="" label="--- Select ---" />
 				<form:option value="Top Wear">Top Wear</form:option>  
                 <form:option value="Bottom Wear">Bottom Wear</form:option>  
                 <form:option value="Winter Wear">Winter Wear</form:option>  
-                <form:option value="Drapes">Drapes</form:option>  
+                <form:option value="Drapes">Drapes</form:option>
+                <form:option value="Bags">Bags</form:option>  
+                <form:option value="Watches">Watches</form:option>
+                <form:option value="Earings">Earings</form:option>      
                 </form:select>
             </td>
-        <td><form:errors path="category" cssStyle="color: #ff0000;"/></td>
+        <td width="30%"><form:errors path="category" cssStyle="color: #ff0000;"/></td>
     </tr>
     
     
      <tr>
-        <td>
+        <td width="25%">
             <form:label path="image">
                 <spring:message text="Please select a image to upload a image"/>
             </form:label>
         </td>
-        <td>
+        <td width="25%">
             <form:input path="image" type="file" />
+        </td>
+         <td width="30%">
+            
         </td>
     </tr>
     
@@ -158,12 +171,21 @@
     </tr>
     
 </table>  
+
 </form:form>
+</div>
+<div class="col-xs-2"></div>
+</div>
 <br>
-<h3>Product List</h3>
+<div class="row"><div class="col-xs-8"><center><h3 style="color:blue">Product List</h3></center></div></div>
+<div class="row">
+<div class="col-xs-2"></div>
+
+<div class="col-xs-8">
+
 <c:if test="${!empty listProduct}">
     <div class="table-responsive">
-    <table class="table table-striped table-bordered">
+    <table class="table table-striped table-bordered w3-blue">
     <thead>
     <tr>
         <th>ID</th>
@@ -196,7 +218,9 @@
     <tbody>
     </table>
  </div>
-</c:if>
+</c:if></div>
+<div class="col-xs-2"></div>
+</div>
 
 <script src="${bjs}bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>

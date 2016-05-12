@@ -15,8 +15,9 @@
 <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="${bcss}bootstrap.min.css"/>
 <link rel="stylesheet" href="${bcss}bootstrap-theme.min.css"/>
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <style type="text/css">
+
+#main{height:100%;}
 .top{text-align:left
 margin-top=5px;}
 <!--   navbar  -->
@@ -24,28 +25,8 @@ margin-top=5px;}
 background-color:#E87199;
 
 }
-  
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- footer script-->
+
 #quote-carousel {
     padding: 0 10px 30px 10px;
     margin-top: 30px;
@@ -107,12 +88,11 @@ background-color:#E87199;
     float: left;
     margin-right: 10px;
 }
-
-.footer{
-position:fixed;
-bottom:0;
-left:0;
-height=80px;
+#footer {
+   position:absolute;
+   bottom:0px;
+   width:100%;
+   height:120px;   /* Height of the footer */
 }
 </style>
 <meta charset="utf-8">
@@ -134,38 +114,35 @@ height=80px;
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="index"><img class="img-responsive" src="${imgloc}companylogo.png" style="margin-top:0px;max-width:70px;"/></a>
+              <a class="navbar-brand" href="${session.getContextPath()}/WomenAdda"><img class="img-responsive" src="${imgloc}companylogo.png" style="margin-top:0px;max-width:70px;"/></a>
             </div>
             <div class="navbar-collapse collapse ">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="index">Home</a></li>
-                <li><a href="aboutus">About Us</a></li>
-                <li><a href="contactus">Contact Us</a></li>
+                <li><a href="${session.getContextPath()}/WomenAdda/aboutUs">About Us</a></li>
+                <li><a href="${session.getContextPath()}/WomenAdda/Contact">Contact Us</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clothes <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="product">TOP WEAR</a></li>
-                    <li><a href="#">BOTTOM WEAR</a></li>
-                    <li><a href="#">WINTER WEAR</a></li>
-                      <li><a href="#">DRAPES</a></li>
+                    <li><a href="${session.getContextPath()}/WomenAdda/product/Top Wear">TOP WEAR</a></li>
+                    <li><a href="${session.getContextPath()}/WomenAdda/product/Bottom">BOTTOM WEAR</a></li>
+                    <li><a href="${session.getContextPath()}/WomenAdda/product/Winter Wear">WINTER WEAR</a></li>
+                     <li><a href="${session.getContextPath()}/WomenAdda/product/Drapes">DRAPES</a></li>
                     </ul>
                 </li>
                    <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">ACCESSORIES <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                      <li><a href="#">Bages</a></li>              
-                      <li><a href="#">Watches</a></li>
-                      <li><a href="#">Earings</a></li>          
+                      <li><a href="${session.getContextPath()}/WomenAdda/product/Bags">Bags</a></li>              
+                      <li><a href="${session.getContextPath()}/WomenAdda/product/Watches">Watches</a></li>
+                      <li><a href="${session.getContextPath()}/WomenAdda/product/Earings">Earings</a></li>          
                   </ul>
-              </li>
-             
-              
+              </li>              
               </ul>
-              <ul class="nav navbar-nav navbar-right">
-               <li id="my-shopbag" class="w-shopping-bag-header"><a href="/my-shoppingbag/"><i class="fa fa-shopping-bag"></i><span>Shopping Bag</span></a></li>
-					<li><a href="registerPage"><span
+              <ul class="nav navbar-nav navbar-right">   
+					<li><a href="${session.getContextPath()}/WomenAdda/registerPage"><span
 							class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-					<li><a href="loginPage"><span
+					<li><a href="${session.getContextPath()}/WomenAdda/loginPage"><span
 							class="glyphicon glyphicon-log-in"></span> Login</a></li>
 				</ul>
             </div>

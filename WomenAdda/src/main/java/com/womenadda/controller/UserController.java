@@ -43,10 +43,10 @@ public class UserController {
 	}
 	@RequestMapping(value="/register")
 	
-	String insertProduct(@ModelAttribute("user") UserRegister u)
+	String insertUser(@ModelAttribute("user") UserRegister u)
 	{
+		    userService.addUser(u);
+		    return"redirect:/index";
 		
-		userService.addUser(u);
-		return"redirect:/index";
 	}
 }

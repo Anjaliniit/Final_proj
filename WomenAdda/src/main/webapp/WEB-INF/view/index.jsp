@@ -1,7 +1,8 @@
+
 <%@include file="header.jsp" %>
+
     <!-- ===========================================Carousel================================================== -->
 
-   <br> 
    
    <p>&nbsp;</p>
    <div id="myCarousel" class="carousel slide">
@@ -31,26 +32,28 @@
     </div>
         
         <!--carousel end here -->
-
+        <p>&nbsp;</p>
  <div class="row">
   <div class="col-md-4">
-    <a href="${imgloc}kurti1.jpg" class="thumbnail">
-      <p></p> 
-      <img src="${imgloc}kurti1.jpg" alt="Pulpit Rock" style="width:150px;height:150px">
+    <a href="product/Top Wear" class="thumbnail">
+      <p>Cushion it! Make your living space happy and cheerful with these electric digitally-printed cushions.</p> 
+      <img src="${imgloc}thumb1.jpg" class="img-rounded" class="img-responsive"   alt=" Pulpit
+			Rock" style="width: 150px; height: 150px">
+		</a>
+  </div>
+  <div class="col-md-4">
+    <a href="product/Bottom Wear" class="thumbnail">
+      <p>It’s a dressy summer! Enjoy the hot Indian summer in stylish and trendy sun dresses</p>
+      <img src="${imgloc}thumb2.jpg" class="img-rounded" class="img-responsive" alt="Moustiers Sainte Marie" style="width:150px;height:150px">
     </a>
   </div>
   <div class="col-md-4">
-    <a href="moustiers-sainte-marie.jpg" class="thumbnail">
-      <p></p>
+    <a href="product/Drapes" class="thumbnail">
+      <p> Choose from vintage to modern, floral prints to abstract geometric and many more</p> 
+      <img src="${imgloc}duppata1.jpg" class="img-rounded" class="img-responsive" alt="Cinque Terre" style="width:150px;height:150px">
     </a>
   </div>
-  <div class="col-md-4">
-    <a href="cinqueterre.jpg" class="thumbnail">
-      <p>The Cinque Terre: A rugged portion of coast in the Liguria region of Italy.</p> 
-      <img src="${imgloc}kurti3.jpg" alt="Cinque Terre" style="width:150px;height:150px">
-    </a>
-  </div>
-</div> 
- </div>
+</div>
 
-<%@include file="footer.jsp"%>
+
+ <%@include file="footer.jsp"%>

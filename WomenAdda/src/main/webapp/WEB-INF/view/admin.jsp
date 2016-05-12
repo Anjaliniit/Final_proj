@@ -51,7 +51,9 @@
                 <form:option value="Haute Curry">Haute Curry</form:option>  
                 <form:option value="Biba">Biba</form:option>  
                 <form:option value="Zara">Zara</form:option>
-                <form:option value="Lavie">Lavie</form:option>   
+                <form:option value="Lavie">Lavie</form:option> 
+                <form:option value="Titan">Titan</form:option>
+                <form:option value="Lavie">Lavie</form:option>  
          </form:select>
          
         </td>
@@ -72,8 +74,11 @@
                 <form:option value="Green">Green</form:option>  
                 <form:option value="Blue">Blue</form:option>  
                 <form:option value="White">White</form:option>
-                <form:option value="White">Pink</form:option>
-                <form:option value="White">Black</form:option>  
+                <form:option value="Pink">Pink</form:option>
+                <form:option value="Black">Black</form:option>
+                <form:option value="Gold">Gold</form:option>  
+                <form:option value="Silver">Silver</form:option>
+                <form:option value="Rose Gold">Rose Gold</form:option>     
                 </form:select>
       </td>
      <td width="30%"><form:errors path="color" cssStyle="color: #ff0000;"/></td>
@@ -177,11 +182,11 @@
 <div class="col-xs-2"></div>
 </div>
 <br>
-<div class="row"><div class="col-xs-8"><center><h3 style="color:blue">Product List</h3></center></div></div>
+<div class="row"><div class="col-xs-10"><center><h3 style="color:blue">Product List</h3></center></div></div>
 <div class="row">
-<div class="col-xs-2"></div>
+<div class="col-xs-1"></div>
 
-<div class="col-xs-8">
+<div class="col-xs-10">
 
 <c:if test="${!empty listProduct}">
     <div class="table-responsive">
@@ -219,7 +224,7 @@
     </table>
  </div>
 </c:if></div>
-<div class="col-xs-2"></div>
+<div class="col-xs-1"></div>
 </div>
 
 <script src="${bjs}bootstrap.min.js"></script>

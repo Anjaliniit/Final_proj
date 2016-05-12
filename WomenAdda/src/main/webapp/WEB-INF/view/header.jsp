@@ -125,7 +125,7 @@ background-color:#E87199;
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clothes <b class="caret"></b></a>
                   <ul class="dropdown-menu">
                     <li><a href="${session.getContextPath()}/WomenAdda/product/Top Wear">TOP WEAR</a></li>
-                    <li><a href="${session.getContextPath()}/WomenAdda/product/Bottom">BOTTOM WEAR</a></li>
+                    <li><a href="${session.getContextPath()}/WomenAdda/product/Bottom Wear">BOTTOM WEAR</a></li>
                     <li><a href="${session.getContextPath()}/WomenAdda/product/Winter Wear">WINTER WEAR</a></li>
                      <li><a href="${session.getContextPath()}/WomenAdda/product/Drapes">DRAPES</a></li>
                     </ul>
